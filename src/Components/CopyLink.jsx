@@ -11,7 +11,7 @@ export default function CopyLink({ longLink, copyClipboard, shortLink }) {
         <button
           onClick={() => {
             copyClipboard();
-            buttonClick.isToggleTrue;
+            buttonClick.isToggleTrue();
           }}
           className="text-blue break-normal"
         >
@@ -20,13 +20,13 @@ export default function CopyLink({ longLink, copyClipboard, shortLink }) {
         <button
           onClick={() => {
             copyClipboard();
-            buttonClick.isToggleTrue;
+            buttonClick.isToggleTrue();
           }}
           className={`rounded-md text-white  w-full p-2 font-bold ${
-            buttonClick ? "bg-purple hover:bg-purple" : "bg-blue"
+            buttonClick.isToggle ? "bg-purple hover:bg-purple" : "bg-blue"
           }`}
         >
-          {buttonClick ? "Copied!" : "Copy"}
+          {buttonClick.isToggle ? "Copied!" : "Copy"}
         </button>
       </div>
     </div>

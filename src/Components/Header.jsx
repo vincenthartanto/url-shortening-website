@@ -34,7 +34,6 @@ export default function Header() {
   };
   const [copyLinkList, setCopyLinkList] = useState([]);
   function copyCliboard() {
-    buttonClick.isToggleTrue();
     navigator.clipboard.writeText(shortLink);
   }
   return (
